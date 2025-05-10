@@ -22,11 +22,10 @@ edition = "2024"
 opt-level = 1
 
 [profile.release]
+strip = "symbols"
+panic = "abort"
 lto = true
 codegen-units = 1
-
-[profile.bench]
-debug = true
 
 [profile.profiling]
 inherits = "release"
